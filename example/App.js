@@ -14,6 +14,7 @@ export default class App extends React.Component {
         [0, 0, 0]
       ],
       currentPlayer: 1,
+      plays: 1,
     }
   }
 
@@ -27,7 +28,8 @@ export default class App extends React.Component {
           [0, 0, 0],
           [0, 0, 0],
           [0, 0, 0]
-        ]
+        ],
+        plays: 1,
     });
   }
 
@@ -70,6 +72,11 @@ export default class App extends React.Component {
 
   onTilePress = (row, col) => {
     //Don't allow tiles to change..
+    let turns = this.state.plays +1;
+    this.setState({
+      plays:turns
+    })
+
     var value=this.state.gameState[row][col];
     if (value !== 0) {return; }
 
@@ -91,10 +98,10 @@ export default class App extends React.Component {
       Alert.alert("The winner is Player 1");
       this.initializeGame();
     } else if(winner === -1){
-      Alert.alert("The winer is Player 2");
+      Alert.alert("The winner is Player 2");
       this.initializeGame();
-    } else if(winner != -1 && winner ==7){
-      Alert.alert("No one is winner");
+    } else if(this.state.plays == 9 && winner != 1 && -1){
+      Alert.alert("It's a tie");
       this.initializeGame();
   }
 }
