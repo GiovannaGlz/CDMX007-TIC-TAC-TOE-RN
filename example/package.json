@@ -17,5 +17,21 @@
   "devDependencies": {
     "babel-preset-expo": "^5.1.1"
   },
-  "private": true
+  "private": false,
+  "name": "tic-tac",
+  "version": "1.0.0",
+  "description": "juego e tic tac toe con temática de Avengers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiovannaGlz/CDMX007-TIC-TAC-TOE-RN.git"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Giovanna González",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GiovannaGlz/CDMX007-TIC-TAC-TOE-RN/issues"
+  },
+  "homepage": "https://github.com/GiovannaGlz/CDMX007-TIC-TAC-TOE-RN#readme"
 }
